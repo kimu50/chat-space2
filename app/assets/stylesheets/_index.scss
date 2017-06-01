@@ -1,0 +1,178 @@
+@mixin haba {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+$white: #FFFFFF;
+$blue: #38AEF0;
+
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.wrap {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	background-color: $blue;
+	text-align: center;
+	color:white;
+}
+
+#chat__side {
+	background-color: #2f3e51;
+	width: 300px;
+	height: 100%;
+	float: left;
+
+
+	.chat__side__var {
+		background-color: #253141;
+		height: 98px;
+		width: 100%;
+
+
+		.chat__side__var__user {
+			background-color: #253141;
+			@include haba;
+
+
+
+			p {
+				font-size: 16px;
+				font-weight: bold;
+				color: $white;
+				height: 50px;
+			  line-height: 50px;
+			}
+		}
+    }
+}
+
+.chat__side__group {
+	@include haba;
+	margin-top: 20px;
+
+	.chat__side__group__name {
+		font-size: 15px;
+		color: $white;
+       }
+    .chat__side__group__text {
+    	font-size: 11px;
+    	color: $white;
+    	margin-top: 5px;
+    	margin-bottom: 40px;
+    }
+
+}
+#main {
+	float: left;
+	position: relative;
+	height: 100%;
+	width: calc(100vw - 300px);
+
+	.main__header {
+		border-bottom: #eeeeee;
+		float: left;
+		width: 100%;
+	
+
+		.main__header__group {
+			float: left;
+		}
+
+
+		.main__header__group__name {
+			padding-top: 35px;
+			font-size: 20px;
+			color: #3333333;
+			padding-left: 40px;
+		}
+
+		.main__header__member {
+			margin-top: 15px;
+			font-size: 12px;
+			color: #999999;
+			padding-left: 40px;
+		}
+
+		.main__header__edit-blue {
+			text-decoration: none;
+			margin-right: 40px;
+			padding: 0px 20px;
+			height: 40px;
+			line-height: 40px;
+			border: solid 1px $blue;
+			color: $blue;
+			margin-top: 28px;
+			float:right;
+		}
+	}
+
+
+	.main__body {
+		background-color: #AAAAAA;
+		float: right;
+		clear: both;
+		width:100%;
+		height: 100%;
+		position:relative;
+
+		.main__body__member{
+			padding-top: 40px;
+			padding-left: 40px;
+			float: left;
+			size:16px;
+			font-weight: bold;
+			color: #434A54;
+		}
+
+		.main__body__date{
+			padding-left: 10px;
+			float: left;
+			padding-top: 40px;
+			size:12px;
+			color: #999999;
+		}
+
+		.main__body__comment{
+			padding-top: 10px;
+			size: 14px;
+			color: #434A54;
+			clear: both;
+			padding-left: 40px;
+		}
+	}
+
+
+	.bottom__form {
+		margin-bottom: 20px;
+		height: 50px;
+		clear: both;
+		position: absolute;
+		bottom:0;
+		padding-left: 40px;
+	    }
+
+	    .bottom__form__text__submit {
+	        
+	    	background-color: $blue;
+	    }
+}
+
+
+
+
+
+
